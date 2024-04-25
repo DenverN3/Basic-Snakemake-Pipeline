@@ -1,4 +1,4 @@
-BASE_DIR = "/Users/denverncube/Desktop/CHOP"
+BASE_DIR = "/path/to/your/fastq/files"
 
 rule all:
     input:
@@ -119,6 +119,6 @@ rule snpEff_annotation:
     threads: 4
     shell:
         f"""
-        java -Xmx8g -jar /Users/denverncube/anaconda3/envs/TEST/share/snpeff-5.2-0/snpEff.jar hg19 {{input.vcf}} -c /Users/denverncube/anaconda3/envs/TEST/share/snpeff-5.2-0/snpEff.config -o vcf -stats {{output.vcf}}.stats.html > {{output.vcf}} 2> {{log}}
+        java -Xmx8g -jar /path/to/snpeff-5.2-0/snpEff.jar hg19 {{input.vcf}} -c /path/to//snpeff-5.2-0/snpEff.config -o vcf -stats {{output.vcf}}.stats.html > {{output.vcf}} 2> {{log}}
         """
 
