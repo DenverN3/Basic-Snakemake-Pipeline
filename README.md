@@ -8,4 +8,6 @@ The basic tools used here are:
 4. Picard for read group correction (you can take this out if your BAM files have read group specified, mine did not so I had to add them)
 5. Samtools for sorting and indexing BAM files
 6. GATK for variant calling
-7. snpEff for variant annotation. 
+7. snpEff for variant annotation.
+
+To enable portability of this pipeline, I also built a docker file that allows you to install all these tools in a custom docker container and enable deployment of the pipeline in a cloud or HPC environment. 
